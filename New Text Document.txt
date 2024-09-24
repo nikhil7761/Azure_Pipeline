@@ -1,0 +1,4 @@
+to run the agent
+./run.cmd
+
+./config.sh
