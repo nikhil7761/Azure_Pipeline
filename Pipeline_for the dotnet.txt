@@ -1,0 +1,5 @@
+1.add dotnet restore      path to project   **/*.csproj
+2.dotnet build             --------------   same                arguments --configuration $(BuildConfiguration)
+3.dotnet publish          path to project   **/*.csproj         arguments -c Release -r win-x64 --self-contained /p:TrimUnusedDependencies=false -o publish_output
+4.Archive                 root folder  $(Build.BinariesDirectory)   archivefiletocreate   $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+5.publish pipeline artifacts     artifactname  drop
